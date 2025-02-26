@@ -1,9 +1,10 @@
-# Chapter-4
+# Question 2 Midterm Devops
 
-Code and examples for Chapter 4 of [Bootstrapping Microservices](https://www.bootstrapping-microservices.com).
-
-In chapter 4 you learn to develop and test a microservices application using Docker-Compose.
-
-Please see README in each sub-directory for instructions on starting the particular example.
-
-[Click here to support my work](https://www.codecapers.com.au/about#support-my-work)
+In this repository, I have provided:
+* The base files from `example-1` of Chapter 4 from Bootstrapping Microservices 2nd edition.
+* The modified `docker-compose.yaml` to add new replicas of `video-streaming` service.
+* An `nginx.conf` configuration file to setup NGINX.
+    * Redirects from HTTP to HTTPS
+    * Uses localhost self signed certificate.
+    * Proxies requests from `/video` to Docker containers.
+    * Uses Round-Robin load balancing for `/video`.
